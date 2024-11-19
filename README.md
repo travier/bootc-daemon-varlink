@@ -22,13 +22,13 @@ See:
 
 ```
 $ cargo build --bin bootc-daemon
-$ sudo ./target/debug/bootc-daemon /tmp/test
+$ sudo ./target/debug/bootc-daemon
 ...
 ```
 
 ```
 $ cargo build --bin bootc-client
-$ sudo chmod 777 /tmp/test
+$ sudo chmod 777 /run/org.bootc.varlink
 $ cargo run --bin bootc-client
 ...
 ```

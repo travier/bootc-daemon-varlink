@@ -27,8 +27,6 @@ impl VarlinkInterface for OrgBootc {
 }
 
 fn main() {
-    let args: Vec<_> = std::env::args().collect();
-
     let org_bootc = OrgBootc;
     let org_bootc_interface = org_bootc::new(Box::new(org_bootc));
 
@@ -42,7 +40,9 @@ fn main() {
         ],
     );
 
-    varlink::listen(service, &args[1],
+    varlink::listen(
+        service,
+        "unix:/run/org.bootc.varlink",
         &varlink::ListenConfig {
             idle_timeout: 0,
             ..Default::default()
