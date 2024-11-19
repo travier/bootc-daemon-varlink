@@ -1,8 +1,7 @@
 mod org_bootc;
 
-use varlink::Connection;
 use crate::org_bootc::VarlinkClientInterface;
-
+use varlink::Connection;
 
 fn main() {
     let connection = Connection::with_address("unix:/run/org.bootc.varlink").unwrap();

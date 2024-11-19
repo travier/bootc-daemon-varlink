@@ -1,8 +1,8 @@
 mod org_bootc;
 
-use crate::org_bootc::{VarlinkInterface, Call_Status};
-use varlink::Result;
+use crate::org_bootc::{Call_Status, VarlinkInterface};
 use std::process::Command;
+use varlink::Result;
 
 struct OrgBootc;
 
@@ -19,8 +19,8 @@ impl VarlinkInterface for OrgBootc {
             Err(e) => {
                 println!("non utf8 output: {e}");
                 return call.reply("".to_string());
-            },
-            Ok(r) => r
+            }
+            Ok(r) => r,
         };
         return call.reply(s);
     }
@@ -35,9 +35,7 @@ fn main() {
         "bootc",
         "0.1",
         "http://varlink.org",
-        vec![
-            Box::new(org_bootc_interface),
-        ],
+        vec![Box::new(org_bootc_interface)],
     );
 
     varlink::listen(
@@ -47,5 +45,6 @@ fn main() {
             idle_timeout: 0,
             ..Default::default()
         },
-    ).unwrap();
+    )
+    .unwrap();
 }
