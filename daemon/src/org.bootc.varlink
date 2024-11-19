@@ -1,0 +1,5 @@
+# bootc update servic
+interface org.bootc
+
+# bootc status
+method Status() -> (status: string)
