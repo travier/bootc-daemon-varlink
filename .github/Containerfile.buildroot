@@ -1,0 +1,17 @@
+FROM quay.io/fedora/fedora:latest
+
+RUN dnf install -y \
+        cargo \
+        cpio \
+        dnf5-plugins \
+        erofs-utils \
+        gcc \
+        gh \
+        git \
+        jq \
+        just \
+        openssl-devel \
+        podman \
+        wget \
+    && \
+    dnf clean all
