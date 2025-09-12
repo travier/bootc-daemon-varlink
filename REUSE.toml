@@ -5,7 +5,9 @@ path = [
   "README.md",
   "Cargo.lock",
   "client/src/org_bootc.rs",
-  "daemon/src/org_bootc.rs"
+  "client/src/org_bootc.varlink",
+  "daemon/src/org_bootc.rs",
+  "daemon/src/org_bootc.varlink"
 ]
 SPDX-FileCopyrightText = "Timothée Ravier <tim@siosm.fr>"
 SPDX-License-Identifier = "CC0-1.0"

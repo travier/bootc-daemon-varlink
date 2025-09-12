@@ -163,7 +163,7 @@ pub fn new(inner: Box<dyn VarlinkInterface + Send + Sync>) -> VarlinkInterfacePr
 }
 impl varlink::Interface for VarlinkInterfaceProxy {
     fn get_description(&self) -> &'static str {
-        "# bootc update servic\ninterface org.bootc\n\n# bootc status\nmethod Status() -> (status: string)\n"
+        "# bootc update service\ninterface org.bootc\n\n# bootc status\nmethod Status() -> (status: string)\n"
     }
     fn get_name(&self) -> &'static str {
         "org.bootc"
