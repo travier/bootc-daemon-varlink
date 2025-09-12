@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: Timothée Ravier
+# SPDX-License-Identifier: CC0-1.0
+
 [package]
 name = "bootc-daemon"
 license = "Apache-2.0 OR MIT"

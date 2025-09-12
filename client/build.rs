@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: Timothée Ravier <tim@siosm.fr>
+// SPDX-License-Identifier: MIT
+
 extern crate varlink_generator;
 
 fn main() {

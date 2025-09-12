@@ -1,0 +1,11 @@
+version = 1
+
+[[annotations]]
+path = [
+  "README.md",
+  "Cargo.lock",
+  "client/src/org_bootc.rs",
+  "daemon/src/org_bootc.rs"
+]
+SPDX-FileCopyrightText = "Timothée Ravier <tim@siosm.fr>"
+SPDX-License-Identifier = "CC0-1.0"

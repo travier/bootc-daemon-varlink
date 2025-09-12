@@ -32,3 +32,7 @@ $ sudo chmod 777 /run/org.bootc.varlink
 $ cargo run --bin bootc-client
 ...
 ```
+
+# License
+
+[MIT](LICENSES/MIT).
