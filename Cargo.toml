@@ -6,4 +6,4 @@ members = [
     "client",
     "daemon"
 ]
-resolver = "2"
+resolver = "3"
