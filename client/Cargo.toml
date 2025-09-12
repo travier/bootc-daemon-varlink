@@ -6,7 +6,7 @@ name = "bootc-client"
 license = "Apache-2.0 OR MIT"
 version = "0.1.0"
 authors = ["Timothée Ravier"]
-edition = "2021"
+edition = "2024"
 build = "build.rs"
 
 [build-dependencies]
