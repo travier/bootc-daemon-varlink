@@ -1,6 +1,9 @@
 // SPDX-FileCopyrightText: Timothée Ravier <tim@siosm.fr>
 // SPDX-License-Identifier: MIT
 
+#![allow(clippy::all)]
+#![allow(dead_code)]
+
 mod org_bootc;
 
 use crate::org_bootc::{Call_Status, VarlinkInterface};
@@ -25,7 +28,7 @@ impl VarlinkInterface for OrgBootc {
             }
             Ok(r) => r,
         };
-        return call.reply(s);
+        call.reply(s)
     }
 }
 

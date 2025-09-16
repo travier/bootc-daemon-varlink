@@ -2,5 +2,12 @@
 # SPDX-License-Identifier: CC0-1.0
 
 [workspace]
-members = [ "client", "daemon" ]
-resolver = "2"
+members = [
+    "client",
+    "daemon"
+]
+resolver = "3"
+
+# https://kobzol.github.io/rust/rustc/2025/05/20/disable-debuginfo-to-improve-rust-compile-times.html
+[profile.dev]
+debug = false
