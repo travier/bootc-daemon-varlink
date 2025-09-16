@@ -8,6 +8,7 @@ version = "0.1.0"
 authors = ["Timothée Ravier"]
 edition = "2024"
 build = "build.rs"
+rust-version = "1.85.0"
 
 [build-dependencies]
 varlink_generator = "10.1.0"
