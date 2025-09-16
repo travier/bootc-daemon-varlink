@@ -28,7 +28,7 @@ impl VarlinkInterface for OrgBootc {
             }
             Ok(r) => r,
         };
-        return call.reply(s);
+        call.reply(s)
     }
 }
 
