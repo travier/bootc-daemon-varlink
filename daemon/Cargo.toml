@@ -10,9 +10,9 @@ edition = "2024"
 build = "build.rs"
 
 [build-dependencies]
-varlink_generator = "10.1.0"
+varlink_generator = "13.0.0"
 
 [dependencies]
-varlink = "11.0.1"
+varlink = "13.0.0"
 serde = { version = "1.0", features = ["derive"] }
 serde_derive = "1.0.215"
