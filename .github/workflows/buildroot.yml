@@ -45,7 +45,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Build container image
-        uses: redhat-actions/buildah-build@v2
+        uses: redhat-actions/buildah-build@v3
         with:
           context: .github
           image: ${{ env.NAME }}
@@ -54,7 +54,7 @@ jobs:
           oci: true
 
       - name: Push to Container Registry
-        uses: redhat-actions/push-to-registry@v2
+        uses: redhat-actions/push-to-registry@v3
         id: push
         if: (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         with:
@@ -71,7 +71,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Build container image
-        uses: redhat-actions/buildah-build@v2
+        uses: redhat-actions/buildah-build@v3
         with:
           context: .github
           image: ${{ env.NAME }}
@@ -80,7 +80,7 @@ jobs:
           oci: true
 
       - name: Push to Container Registry
-        uses: redhat-actions/push-to-registry@v2
+        uses: redhat-actions/push-to-registry@v3
         id: push
         if: (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         with:
@@ -106,7 +106,7 @@ jobs:
             "${REGISTRY}/${NAME}:latest-aarch64"
 
       - name: Push to Container Registry
-        uses: redhat-actions/push-to-registry@v2
+        uses: redhat-actions/push-to-registry@v3
         id: push
         if: (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
         with:
